@@ -1,6 +1,6 @@
 .PHONY: run
 run:
-	cd app;cargo run
+	cargo run
 
 .PHONY: up
 up:
