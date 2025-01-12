@@ -1,13 +1,5 @@
-use clap::Parser;
-
-#[derive(Parser)]
-struct Cli {
-    pattern: String,
-    path: std::path::PathBuf,
-}
-
 fn main() {
-    let args = Cli::parse();
-
-    println!("pattern: {:?}, path: {:?}", args.pattern, args.path)
+    if let Err(code) = pec::run(std::env::args_os()) {
+        std::process::exit(code);
+    }
 }
