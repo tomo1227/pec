@@ -8,10 +8,10 @@ use walkdir::WalkDir;
 #[command(version, about, long_about = None)]
 struct Cli {
     dirs: Vec<PathBuf>,
-    #[arg(short, long)]
-    verbose: bool,
-    #[arg(short, long)]
-    debug: bool,
+    // #[arg(short, long)]
+    // verbose: bool,
+    // #[arg(short, long)]
+    // debug: bool,
 }
 
 pub fn run(_args: std::env::ArgsOs) -> Result<(), i32> {
